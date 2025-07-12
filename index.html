@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P Blockchain Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="lib/vis-network.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>P2P Blockchain Network Visualization</h1>
+        
+        <div class="controls">
+            <button id="addNodeBtn">Add Node</button>
+            <button id="mineBlockBtn">Mine Block</button>
+            <button id="addTransactionBtn">Add Transaction</button>
+            <button id="resolveConflictsBtn">Resolve Conflicts</button>
+        </div>
+        
+        <div class="network-container">
+            <div id="network"></div>
+            <div id="blockchainInfo">
+                <h3>Blockchain Information</h3>
+                <div id="chainLength">Chain Length: 1</div>
+                <div id="lastBlock">Last Block Hash: Genesis</div>
+                <div id="nodesCount">Nodes: 1</div>
+            </div>
+        </div>
+        
+        <div class="transaction-form" id="transactionForm" style="display:none;">
+            <h3>Create New Transaction</h3>
+            <input type="text" id="sender" placeholder="Sender">
+            <input type="text" id="recipient" placeholder="Recipient">
+            <input type="number" id="amount" placeholder="Amount">
+            <button id="submitTransaction">Submit</button>
+            <button id="cancelTransaction">Cancel</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
